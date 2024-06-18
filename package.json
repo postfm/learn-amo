@@ -7,7 +7,5 @@
   "author": "postfm <72159645+postfm@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "@vue/cli-service": "^5.0.8"
-  }
+  "dependencies": {}
 }
