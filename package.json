@@ -1,0 +1,10 @@
+{
+  "name": "learn-amo",
+  "version": "1.0.0",
+  "description": "learn amo project",
+  "main": "index.js",
+  "repository": "https://github.com/postfm/learn-amo.git",
+  "author": "postfm <72159645+postfm@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true
+}
