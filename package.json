@@ -7,6 +7,10 @@
   "author": "postfm <72159645+postfm@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve"
+  },
   "dependencies": {
     "vue": "^3.4.29"
   },
