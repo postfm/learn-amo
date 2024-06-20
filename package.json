@@ -9,7 +9,9 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
-    "serve": "vue-cli-service serve"
+    "serve": "vue-cli-service serve",
+    "widget": "ts-node ./scripts/prod.ts",
+    "widget:dev": "ts-node ./scripts/dev.ts"
   },
   "dependencies": {
     "vue": "^3.4.29"
