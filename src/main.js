@@ -1,1 +1,3 @@
-console.log(123);
+export function a(x) {
+  return x * 2
+}
