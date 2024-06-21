@@ -1,4 +1,10 @@
+require('dotenv').config()
+
+const { WEBPACK_PORT } = process.env
+const publicPath = `https://localhost:${WEBPACK_PORT}`
+
 module.exports = {
+  publicPath,
   configureWebpack: {
     output: {
       library: 'starterpackapp',
@@ -13,5 +19,6 @@ module.exports = {
   },
   devServer: {
     https: true,
+    port: WEBPACK_PORT,
   },
 };
