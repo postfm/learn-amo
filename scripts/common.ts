@@ -1,18 +1,18 @@
 import { Config } from 'amo-widget-builder';
-import path from 'path';
+import * as path from 'path';
 
 export const config: Config = {
   name: {
-    ru: 'Мой первый виджет',
+    ru: 'Мой Первый Виджет',
   },
   description: {
-    ru: 'Это виджет созданный во время обучения',
+    ru: 'Этот виджет невероятен',
   },
   shortDescription: {
-    ru: 'Краткое описание виджета',
+    ru: 'Тут кратенько',
   },
   tourDescription: {
-    ru: 'Установи меня',
+    ru: 'Установи меня!',
   },
   advancedSettingsTitle: {
     ru: 'Настройки тут',
@@ -22,6 +22,6 @@ export const config: Config = {
     required: false,
   },
   locales: ['ru'],
-  outDir: path.resolve(__dirname, '..'),
   bundleDir: path.resolve(__dirname, '../dist'),
+  outDir: path.resolve(__dirname, '..'),
 };

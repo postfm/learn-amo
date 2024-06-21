@@ -1,7 +1,8 @@
 export default function (widget) {
-  widget.callbacks = {
+  widget.cllbacks = {
     settings: function () { },
     init: function () {
+      console.log('Hello, World!');
       return true;
     },
     bind_actions: function () {
@@ -23,9 +24,8 @@ export default function (widget) {
     todo: {
       selected: function () { }
     },
-    onSave: function () { return true },
+    onSave: function () { },
     onAddAsSource: function (pipeline_id) { }
   }
-
   return widget
 }
