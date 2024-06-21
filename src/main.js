@@ -1,5 +1,5 @@
 export default function (widget) {
-  widget.cllbacks = {
+  widget.callbacks = {
     settings: function () { },
     init: function () {
       console.log('Hello, World!');
@@ -9,6 +9,7 @@ export default function (widget) {
       return true;
     },
     render: function () {
+      console.log('Я рендерюсь!');
       return true;
     },
     dpSettings: function () { },
@@ -24,7 +25,9 @@ export default function (widget) {
     todo: {
       selected: function () { }
     },
-    onSave: function () { },
+    onSave: function () {
+      return true
+    },
     onAddAsSource: function (pipeline_id) { }
   }
   return widget

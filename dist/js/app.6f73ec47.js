@@ -1,2 +1,0 @@
-(function(e,o){"object"===typeof exports&&"object"===typeof module?module.exports=o():"function"===typeof define&&define.amd?define([],o):"object"===typeof exports?exports["starterpackapp"]=o():e["starterpackapp"]=o()})(self,(()=>(()=>{var e={};return console.log(123),e})()));
-//# sourceMappingURL=app.6f73ec47.js.map
