@@ -1,5 +1,24 @@
-export default function (widget) {
-  widget.callbacks = {
+import { Widget } from './widget';
+
+export default function (amoWidget: any) {
+  let widget: Widget;
+  const getWidget = async () => {
+    if (process.env.NODE_ENV === 'production') {
+      __webpack_public_path__ = `${amoWidget.params.path}/build/`;
+    }
+    if (!widget) {
+      widget = new Widget(amoWidget);
+    }
+    return widget;
+  };
+
+  amoWidget.callbacks = {
+    setting($box) {
+      if (amoWidget.params.status === 'not_configured') {
+        amoWidget.background_install();
+      }
+    },
+
     init: function () {
       console.log('Hello, World!');
       return true;
@@ -9,8 +28,8 @@ export default function (widget) {
       return true;
     },
 
-    render: function () {
-      console.log('Я рендерюсь!');
+    render: async function () {
+      (await getWidget()).onRender();
       return true;
     },
 
@@ -40,5 +59,5 @@ export default function (widget) {
 
     onAddAsSource: function (pipeline_id) {},
   };
-  return widget;
+  return amoWidget;
 }
