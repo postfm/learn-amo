@@ -1,6 +1,7 @@
 require('dotenv').config()
 
-const { WEBPACK_PORT } = process.env
+const { NODE_ENV = 'development', WEBPACK_PORT } = process.env
+const webpack = require('webpack')
 const publicPath = `https://localhost:${WEBPACK_PORT}`
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
       library: 'starterpackapp',
       libraryTarget: 'umd',
     },
+    plugins: [new webpack.EnvironmentPlugin({ NODE_ENV })]
   },
   chainWebpack: (config) => {
     config.plugins.delete('html');
@@ -17,8 +19,24 @@ module.exports = {
     config.plugins.delete('prefetch');
     config.optimization.delete('splitChunks');
   },
+  css: {
+    extract: false,
+    loaderOptions: {
+      less: {
+        lessOptions: {
+          javascriptEnabled: true
+        }
+      }
+    }
+  },
   devServer: {
     https: true,
+    host: 'localhost',
     port: WEBPACK_PORT,
+    headers: {
+      'Access-Allow-Origin': "*",
+      'Access-Allow-Headers': "*",
+      'Access-Allow-Methods': "*",
+    }
   },
 };

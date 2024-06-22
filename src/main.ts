@@ -1,34 +1,44 @@
 export default function (widget) {
   widget.callbacks = {
-    settings: function () { },
     init: function () {
       console.log('Hello, World!');
       return true;
     },
+
     bind_actions: function () {
       return true;
     },
+
     render: function () {
       console.log('Я рендерюсь!');
       return true;
     },
-    dpSettings: function () { },
-    advancedSettings: function () { },
-    destroy: function () { },
+
+    dpSettings: function () {},
+
+    advancedSettings: function () {},
+
+    destroy: function () {},
+
     contacts: {
-      selected: function () { }
+      selected: function () {},
     },
-    onSalesbotDesignerSave: function (handler_code, params) { },
+
+    onSalesbotDesignerSave: function (handler_code, params) {},
+
     leads: {
-      selected: function () { }
+      selected: function () {},
     },
+
     todo: {
-      selected: function () { }
+      selected: function () {},
     },
+
     onSave: function () {
-      return true
+      return true;
     },
-    onAddAsSource: function (pipeline_id) { }
-  }
-  return widget
+
+    onAddAsSource: function (pipeline_id) {},
+  };
+  return widget;
 }
